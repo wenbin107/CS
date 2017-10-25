@@ -1,0 +1,113 @@
+.clearfix::after {
+  display: block;
+  clear: both;
+  height: 0;
+  content: ''; }
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: red; }
+
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: red; }
+
+#banner {
+  background-image: url("http://cfbassets.b0.upaiyun.com/assets/v2/content1_bg-7cb3991281eedd065030e80f7ffd4634.jpg");
+  color: #fff; }
+  #banner header {
+    width: 1220px;
+    height: 120px;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    line-height: 120px;
+    padding: 0 20px 0 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border-bottom: 1px solid #ccc; }
+    #banner header p {
+      font-size: 20px;
+      float: left; }
+  #banner #imgLeft {
+    float: left;
+    background-image: url("http://cfbassets.b0.upaiyun.com/assets/v2/logo-fa8e729626160b3f139584380142d0e0.png\a 		");
+    background-repeat: no-repeat;
+    height: 70px;
+    width: 130px;
+    margin-top: 40px; }
+  #banner ul {
+    float: left;
+    margin-left: 50px;
+    font-size: 20px; }
+  #banner ul li {
+    position: relative;
+    float: left;
+    padding: 0 40px; }
+    #banner ul li div {
+      display: none;
+      line-height: 50px;
+      position: absolute;
+      background: #fff;
+      color: #000;
+      top: 100px;
+      padding: 0;
+      margin-top: 0;
+      height: 100px;
+      left: 10px;
+      width: 100px;
+      text-align: center; }
+  #banner ul li:hover {
+    cursor: pointer; }
+    #banner ul li:hover div {
+      display: block; }
+  #banner input {
+    padding: 5px 0 0 10px;
+    opacity: 0.5;
+    margin-left: 60px;
+    border-style: none;
+    height: 40px;
+    width: 300px; }
+  #banner a {
+    margin-left: 170px;
+    font-size: 20px;
+    color: #fff; }
+  #banner #mid {
+    padding: 180px 0 205px;
+    text-align: center; }
+
+#help {
+  width: 100%; }
+
+.box {
+  padding: 50px 0;
+  background-color: #FCFDFD;
+  text-align: center;
+  width: 50%;
+  display: inline-block; }
+  .box button {
+    margin-top: 20px;
+    width: 240px;
+    height: 80px;
+    font-size: 30px;
+    line-height: 50px;
+    background-color: #33CC99;
+    color: #fff; }
+
+.box:first-child {
+  background-color: #FBFBFA; }
+  .box:first-child button:last-child {
+    background-color: #CDAC65; }
+
+#hot ul {
+  width: 80%;
+  border: 1px solid red;
+  margin: 0 auto; }
+  #hot ul li {
+    position: relative;
+    float: left; }
+    #hot ul li div {
+      position: absolute;
+      border: 1px solid red;
+      height: 100%;
+      width: 100%;
+      top: 0px;
+      z-index: 2;
+      background-color: rgba(0, 0, 0, 0.5); }

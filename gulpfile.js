@@ -16,7 +16,7 @@ var cssnano = require('gulp-cssnano');
 // 引入sass预编译
 var sass = require('gulp-sass');
 
-
+var imgmin = require('gulp-imagemin');
 
 // *****浏览器同步
 var browserSync = require('browser-sync');
@@ -64,7 +64,7 @@ gulp.task('style',function(){
 
 // 第四个任务,图片压缩
 gulp.task('imgs',function(){
-    gulp.src('src/images/*.jpg')
+    gulp.src('src/image/*.jpg'||'src/image/*.png')
     .pipe(imgmin())
     .pipe(gulp.dest('dist/images'))
 });
@@ -86,11 +86,12 @@ gulp.task('servers',function(){
     gulp.watch('src/*.html',['html']);
     gulp.watch('src/js/**/*.js',['js']);
     gulp.watch('src/css/*.scss',['style']);
+     gulp.watch('src/image/*.jpg'||'src/image/*.png',['imgs']);
 });
 
 // 使用一条命令执行所有任务
 // *****
-gulp.task('default',['servers','html','js','style']);
+gulp.task('default',['servers','html','js','style','imgs']);
 
 
 
