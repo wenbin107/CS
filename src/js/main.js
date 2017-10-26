@@ -1,21 +1,9 @@
 require(['jquery'],function($){
 	// alert(1);
-	$.ajax({
-            url: 'json/hot.json',
-            type: 'get',
-            dataType: 'json',
-            data: {
-                name: 'lishijie'
-            },
-            success:function(data){
-                console.log(data);
-            }
-        });
-	
-	
-});
-var arr =
-{
+	$(function(){
+        
+         var arr =
+			{
 	"hot":[
 	{   
 		"name":"高野山四天三晚避世体验",
@@ -90,3 +78,64 @@ var arr =
         
 	}]
 };
+// console.log(arr.hot);
+for(var i = 0;i<arr.hot.length;i++){
+	var lis = $('<li style="width: 25%;"><div id="black"><img style="width: 50%;margin-top: 100px;margin-left: 80px;" src="images/9D82A3000F19ED32376D2AED51CC0AD9.jpg"><p style="margin-top: 20px;font-size: 20px;color: #fff;text-align: center;">扫码手机上体验更佳</p></div><img style="width:100%" src="'+arr.hot[i].src+'"><p style ="margin-top:-80px;font-size:20px;color:#fff;">'+arr.hot[i].name+'</p><p style="font-size:20px;color:#fff">'+arr.hot[i].value+'</p></li>');
+    console.log(lis.get(0));
+    $('#hot ul p').css('overflow','hidden').css('width','100%').css("white-space","nowrap").css("text-overflow","ellipsis");
+    $('#hot ul').append(lis);
+    $('#hot ul li').css({
+    	"width":"295px",
+    	'height':'474px',
+    })
+}
+var index = 0;
+var Left = 0;
+
+var luntimer =null;
+fn();
+
+ function fn(){
+ 
+ 	luntimer = setInterval(function(){
+ 	$('#btn div').css('background','#ccc');
+    $('#btn div').eq(index).css('background','#000');
+    $('#hot').scrollLeft(Left); 
+    index++;
+    Left=1180*index;
+    if(Left>=3540){
+    	Left = 0;
+    	index=0;
+    }
+    // $('#hot ul').get(0).scrollLeft = Left +"px";
+},3000);
+
+ }
+$('#btn div').hover(function() {
+	 clearInterval(luntimer); 
+	index = $(this).index();
+	$('#btn div').css('background','#ccc');
+    $('#btn div').eq(index).css('background','#000');
+      $('#hot').scrollLeft(index*1180);
+  
+});
+
+$('#hot ul li').hover(function(){
+	$(this).children("#black").show()
+	clearInterval(luntimer);
+
+},function(){
+	$(this).children("#black").hide();
+	clearInterval(luntimer);
+	fn();
+	
+});
+
+
+
+	})
+	
+	
+	
+});
+

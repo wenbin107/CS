@@ -64,9 +64,13 @@ gulp.task('style',function(){
 
 // 第四个任务,图片压缩
 gulp.task('imgs',function(){
-    gulp.src('src/image/*.jpg'||'src/image/*.png')
+    gulp.src('src/image/*.jpg')
     .pipe(imgmin())
-    .pipe(gulp.dest('dist/images'))
+    .pipe(gulp.dest('dist/images'));
+    gulp.src('src/image/*.png')
+    .pipe(imgmin())
+    .pipe(gulp.dest('dist/images'));
+
 });
 
 
@@ -86,7 +90,8 @@ gulp.task('servers',function(){
     gulp.watch('src/*.html',['html']);
     gulp.watch('src/js/**/*.js',['js']);
     gulp.watch('src/css/*.scss',['style']);
-     gulp.watch('src/image/*.jpg'||'src/image/*.png',['imgs']);
+     gulp.watch('src/image/*.jpg',['imgs']);
+     gulp.watch('src/image/*.png',['imgs']);
 });
 
 // 使用一条命令执行所有任务
