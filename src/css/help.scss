@@ -1,0 +1,109 @@
+#banner{
+	display:none;
+}
+.banner{
+	background-image: url('http://cfbassets.b0.upaiyun.com/assets/v2/content1_bg-7cb3991281eedd065030e80f7ffd4634.jpg');
+	// border:1px solid red;
+	color:#fff;
+	// height: 400px;
+	header{
+
+		width: 1220px;
+        height: 120px;
+       margin: 0 auto;
+       border-bottom: 1px solid rgba(255,255,255,0.2);
+       line-height: 120px;
+       padding: 0 20px 0 20px;
+       -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+        // box-sizing: border-box;
+         border-bottom:1px solid #ccc;
+        p{  
+        	 font-size: 20px;
+        	float: left;
+        }
+	}
+	#imgLeft{
+		float: left;
+		background-image: url('http://cfbassets.b0.upaiyun.com/assets/v2/logo-fa8e729626160b3f139584380142d0e0.png
+		');
+		background-repeat: no-repeat;
+		height: 70px;
+		width: 130px;
+		margin-top: 40px;
+	}
+	ul{
+		float: left;
+	    margin-left:50px;
+	    font-size: 20px;
+	}
+	ul li {
+        position: relative;
+		float: left;
+		padding:0 40px;
+		div{
+			 display: none;
+			 line-height: 50px;
+			position: absolute;
+			// border:1px solid red;
+			background: #fff;
+			color: #000;
+			top:100px;
+			padding: 0;
+			margin-top: 0;
+			height:100px;
+			left:10px;
+			width: 100px;
+			text-align: center;
+			
+		}
+	}
+	ul li:hover{
+		cursor: pointer;
+		div{
+			display: block;
+		}
+	}
+	input{
+        padding: 5px 0 0 10px;
+        // background: none;
+        opacity: 0.5;
+        // color: #fff;
+		margin-left: 60px;
+		border-style: none;
+		height:40px;
+		width: 300px;
+	}
+	a{
+		margin-left: 170px;
+		font-size: 20px;
+		color: #fff;
+	}
+	#mid{
+		padding: 180px 0 205px;
+		text-align: center;
+		
+	}
+}
+footer{
+	height: 240px;
+	background: url("../../images/1.jpg");
+	
+}
+
+.box3{
+	 position: absolute;
+	 margin-top: 20px auto;
+	 top:0px;
+	 right:-50px;
+	 opacity: 0;
+}
+.box3:first-child{
+	 opacity: 1;
+}
+
+#bigBoxs{
+	position: relative;
+	height: 500px;
+	width: 1224px;
+}

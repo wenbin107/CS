@@ -1,7 +1,30 @@
 require(['jquery'],function($){
 	// alert(1);
 	$(function(){
-        
+        $.ajax({
+            url: '../json/hot.json',
+            type: 'Get',
+            dataType: 'json',
+            // data: {
+            //     offset: 0,
+            // },
+            success:function(data){
+                
+                for(var i = 0; i < data.items.length;i++){
+                	for(var k = 0;k<data.items[i].pc.length;k++){
+                          if(data.items[i].pc[k].poi_category != "景点"&&data.items[i].pc[k].poi_category != "其它"){
+                		console.log(data.items[i].pc[k].desc);
+                	var box1 = $('<div style="border:1px solid red;width:300px;"  class="box1 left"><img style="width:300px;height:400px;"  src="'+data.items[i].pc[k].poi_category+'"><p>'+data.items[i].pc[k].desc+'</p></div>')
+                     $('#bigBox').append(box1[k]);
+                	}
+                	
+                	}
+                	
+
+                }   
+            }
+        });
+
          var arr =
 			{
 	"hot":[
@@ -130,7 +153,26 @@ $('#hot ul li').hover(function(){
 	fn();
 	
 });
-
+var zaiTimer = null;
+$('.change').click(function(){
+	$('.zai').css('background','#ccc')
+	clearInterval(zaiTimer);
+	$('.nav').css('display','block');
+	$('.route1').css('display','none');
+	var index = 0;
+	zaiTimer = setInterval(function(){
+		
+		$('.zai').eq(index).css('background','red')
+		if(index>=4){
+			$('.nav').css('display','none');
+	        $('.route1').css('display','block');
+		}
+		index++;
+	},500)
+})
+$('#bwdz').click(function(){
+	location.href = "help.html"
+})
 
 
 	})
@@ -138,4 +180,3 @@ $('#hot ul li').hover(function(){
 	
 	
 });
-

@@ -1,1 +1,29 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Document</title><link rel="stylesheet" href="css/reset.css"><link rel="shortcut icon" href="images/favicon.jpg"><link rel="stylesheet" href="css/index.css"><link rel="stylesheet" href="css/screen.css" media="screen and (max-width: 1224px)"></head><body><header class="clearfix"><div id="imgLeft" class="clearfix"></div><ul class="clearfix"><li>首页</li><li>定制<div><i>帮我定制</i> <i>自助定制</i></div></li><li>灵感<div><i>行程</i><br><i>去处</i></div></li></ul><input type="text" placeholder="搜索 国家或城市"> <a>注册/登录</a></header></body></html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>出发吧 - 旅行计划</title><link rel="stylesheet" href="css/reset.css"><link rel="shortcut icon" href="images/favicon.jpg"><link rel="stylesheet" href="css/help.css"><link rel="stylesheet" href="css/screen.css" media="screen and (max-width: 1224px)"></head><body><div id="banner" class="banner" style="position:fixed;width: 100%;background-color:#444A46;z-index:10;background-image: none"><header class="clearfix"><div id="imgLeft" class="clearfix"></div><ul class="clearfix"><li id="sy">首页</li><li>定制<div><i>帮我定制</i> <i>自助定制</i></div></li><li>灵感<div><i>行程</i><br><i>去处</i></div></li></ul><input type="text" placeholder="搜索 国家或城市"> <a>注册/登录</a></header></div><div class="banner"><header class="clearfix"><div id="imgLeft" class="clearfix"></div><ul class="clearfix"><li id="sy">首页</li><li>定制<div><i>帮我定制</i> <i>自助定制</i></div></li><li>灵感<div><i>行程</i><br><i>去处</i></div></li></ul><input type="text" placeholder="搜索 国家或城市"> <a>注册/登录</a></header><div id="mid"><img src="http://cfbassets.b0.upaiyun.com/assets/v2/text-c9dd190a266de72d33a9876555306c72.png"></div></div><div style="font-size: 0"><img style="width: 100% ;height:96%" src="images/10.png"> <img style="width: 100% ;height:96%" src="images/5.jpg"> <img style="width: 100% ;height:96%" src="images/6.jpg"> <img style="width: 100% ;height:96%" src="images/7.jpg"> <img style="width: 100% ;height:96%" src="images/8.png"> <img style="width: 100% ;height:96%" src="images/9.png"></div><div id="end" style="text-align: center"><div class="endHead" style="width: 80%;margin:20px auto;border-bottom: 1px solid red; padding-bottom: 10px;text-align: center"><p style="font-size: 30px">客户案例</p></div><div id="bigBoxs"><div class="box3" style="display:block;width: 80%;margin:20px auto"><p>张小姐专属定制欧洲四国15日路线</p><p>人均花费：¥14000</p><p>「偶然的机会知道了指南猫，去年欧洲之旅在设计师的指引下顺利完成愉快旅行的。我的设计师从没见过面，感觉就像多年的邻家妹妹，因为设计师张若小姐，我还会继续选择指南猫！今年全家旅行还选择她为我们设计行程！」</p><img style="display:block;margin:10px auto;width: 300px" src="images/4.png"><p>Sabrina专属定制的清迈之旅</p></div><div class="box3" style="width: 80%;margin:20px auto"><p>Alan及好友专属定制大堡礁度假路线</p><p>人均花费：¥16000</p><p>「设计师在设计路线的时候很合理，照顾到了老人的安排，该包车的时候就包车，如果安排了公共交通都写得非常清楚，基本上澳大利亚最精华的都玩到了，特别是大堡礁，还好听了设计师的建议去圣灵群岛看心型礁，攻略游记里推荐的凯恩斯完全没法比。」</p><img style="display:block;margin:10px auto;width: 300px" src="images/4.png"><p>Sabrina专属定制的清迈之旅</p></div><div class="box3" style="width: 80%;margin:20px auto"><p>Sabrina专属定制的清迈之旅</p><p>人均花费：¥3000</p><p>「和男朋友一起去小清新圣地清迈。像我这种懒得做攻略的人，指南猫实在是太适合我了。衣食住行尤老师都帮我计划好了，我带着男票，男票带着钱，手拉着手就可以出发了~」</p><img style="display:block;margin:10px auto;width: 300px" src="images/4.png"><p>Sabrina专属定制的清迈之旅</p></div></div></div><div id="dingzhi"><img style="display: block;margin:40px auto" src="images/01.jpg"> <button class="btns" style="display:block;margin:100px auto;width: 300px;height:100px;background-color:#00CDA9;font-size: 30px">开始定制</button></div><footer></footer><script type="text/javascript">var boxs = document.querySelectorAll('.box3');
+    console.log(boxs.length);
+    var index = 0;
+setInterval(function(){    
+  for(var k = 0;k < boxs.length;k++){
+    boxs[k].style.opacity = 0;
+      }
+     boxs[index].style.opacity = 1; 
+     index++;
+     if(index>=3){
+      index=0;
+     }
+},1000)
+var sy = document.querySelector('#sy');
+var btns = document.querySelector('.btns');
+btns.onclick = function(){
+  location.href = "http://m.zhinanmao.com/order/?refer=cfb";
+}
+sy.onclick = function(){
+  location.href = "index.html";
+}
+document.onscroll = function(){
+  // console.log(document.documentElement.scrollTop);
+  if(document.documentElement.scrollTop>=200){
+    banner.style.display = "block";
+  }else{
+    banner.style.display = "none";
+  }
+}</script></body></html>

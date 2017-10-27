@@ -136,18 +136,30 @@ input:-moz-placeholder, textarea:-moz-placeholder {
 #ins {
   height: 900px;
   margin: 0 auto;
-  border: 1px solid red;
+  padding-top: 0.1px;
   background-image: url(http://cfbassets.b0.upaiyun.com/assets/v2/bg2-e150cef21f7e2b00e465e630dbe7c138.jpg); }
   #ins p > a {
     font-size: 20px;
     cursor: pointer;
     color: #fff;
     margin-left: 10px; }
+  #ins .nav {
+    height: 300px;
+    width: 350px;
+    position: absolute;
+    margin-left: 600px;
+    margin-top: 300px;
+    display: none; }
+    #ins .nav .zai {
+      height: 40px;
+      width: 40px;
+      background-color: #ccc;
+      border-radius: 50%;
+      margin-left: 30px; }
 
 .route1 {
   width: 1220px;
   height: 780px;
-  border: 1px solid red;
   margin: 0 auto; }
   .route1 .route {
     box-sizing: border-box;
@@ -221,4 +233,5 @@ input:-moz-placeholder, textarea:-moz-placeholder {
 
 footer {
   height: 240px;
+  width: 100%;
   background: url("../../images/1.jpg"); }
