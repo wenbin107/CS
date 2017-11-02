@@ -10,6 +10,40 @@
     <link rel="stylesheet" type="text/css" href="css/screen.css"  media="screen and (max-width: 1224px)">
 </head>
 <body>
+<div id="mask"></div>
+<div class="denglu">
+    <div class="zhanghu">
+      <h1>登录账户
+        <i id="del"></i>
+        <a href="zc.html">注册</a>
+      </h1>
+      <input type="text" placeholder="邮箱或手机">
+      <input type="password" placeholder="密码">
+      <div class="jizhu">
+        <span><input type="checkbox">记住我</span>
+        <a>忘记密码?</a>
+        <p>邮箱或手机不能为空</p>
+      </div>
+      <button>登录</button>
+      <div class="mode">
+        <p class="wire"></p>
+        <p class="else">其他登录方式</p>
+        <p class="wire"></p>
+      </div>
+      <div class="qita">
+        <a href="" class="One">
+          <i></i>
+        </a>
+        <a href="" class="Two">
+          <i></i>
+        </a>
+        <a href="" class="Three">
+          <i></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
     <div id="banner">
        <header class = "clearfix">
            <div id="imgLeft" class = "clearfix">
@@ -22,7 +56,7 @@
                <li>定制
                <div>
                    <i id="bwdz">帮我定制</i>
-                   <i id="zzdz">自助定制</i>
+                   <i id="zzdz">自助定制</a></i>
                </div>
                </li>
                <li>灵感
@@ -34,7 +68,7 @@
                </li>
            </ul>
            <input type="text" placeholder="搜索 国家或城市" >
-           <a>注册/登录</a>
+           <a id="alert1">注册/登录</a>
        </header> 
            <div id="mid">
                <img src="http://cfbassets.b0.upaiyun.com/assets/v2/text-c9dd190a266de72d33a9876555306c72.png">
@@ -221,6 +255,24 @@
     </footer>
 	<script type="text/javascript" src = "js/require.js" data-main="js/main.js" async ="ture">
         
+    </script>
+    <script type="text/javascript">
+      var alert1 = document.querySelector('#alert1');
+      var mask=document.getElementById("mask");
+      var denglu = document.querySelector('.denglu');
+      alert1.onclick = function(){
+      console.log(denglu.style.display = "block");
+      $(denglu).fadeIn(4000);
+      mask.style.display="block";
+      }
+    var del = document.querySelector('#del');
+    del.onclick = function(){
+      console.log(denglu.style.display = "none");
+      $(denglu).fadeOut(400);
+      mask.style.display="none";
+
+    }
+
     </script>
 </body>
 </html>

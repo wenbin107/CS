@@ -172,6 +172,9 @@ $('.change').click(function(){
 })
 $('#bwdz').click(function(){
 	location.href = "help.html"
+});
+$('#zzdz').click(function(){
+	location.href = "help1.html"
 })
 
 
