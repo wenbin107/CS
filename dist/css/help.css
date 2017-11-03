@@ -69,6 +69,7 @@ li {
           color: #fff;
           text-decoration: none; }
         .head-container .header .nav-pc li .subitem {
+          display: none;
           position: absolute;
           width: 120px;
           height: 100px;

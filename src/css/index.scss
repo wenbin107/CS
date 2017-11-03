@@ -471,6 +471,123 @@ input:-moz-placeholder, textarea:-moz-placeholder {
 		    }
 		}
 	}
+.impression{
+    width: 100%;
+    background-color: #f0f3f5;
+    padding-bottom: 50px;
+    .impress{
+    	width: 1220px;
+    	height: 100px;
+    	margin:0 auto;
+    	text-align: center;
+	    font-size: 40px;
+	    color: #2d3a40;
+	    line-height: 120px;
+    }
+    .Pinterest{
+    	width: 1220px;
+    	margin:0 auto;
+    	.yinxiang{
+    		display: block;
+		    margin-top: 20px;
+		    margin-left: 20px;
+		    padding: 4px;
+		    background-color: white;
+		    -webkit-box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    box-sizing: border-box;
+		    -webkit-transition: all 0.3s ease-in;
+		    transition: all 0.3s ease-in;
+		    text-decoration: none;
+    		.img-cnt{
+	    		width: 100%;
+	    		img{
+	    			display: block;
+				    width: 100%;
+				    height: 100%;
+	    		}
+	    		p{
+	    			position: relative;
+				    z-index: 4;
+				    width: 270px;
+				    padding: 3px 14px 3px 0;
+				    margin-top: -24px;
+				    -webkit-box-sizing: border-box;
+				    -moz-box-sizing: border-box;
+				    box-sizing: border-box;
+				    font-size: 12px;
+				    text-align: right;
+				    text-indent: 10px;
+				    color: white;
+				    text-shadow: 0 1px 1px rgba(255,255,255,0.1);
+	    		}
+	    	}
+	    	.txt-cnt{
+	    		position: relative;
+			    padding: 16px;
+			    background-color: white;
+			    padding-bottom: 0;
+			    .txt{
+			    	font-size: 14px;
+				    color: #333;
+				    word-break: break-all;
+				    overflow: hidden;
+				    text-overflow: ellipsis;
+				    display: -webkit-box;
+				    -webkit-line-clamp: 3;
+				    -webkit-box-orient: vertical;
+			    }
+	    	}
+	    	.note-bottom{
+	    		color: #ccc;
+			    font-size: 14px;
+			    padding-left: 16px;
+			    padding-right: 16px;
+			    height: 48px;
+			    line-height: 48px;
+			    .fl{
+			    	float: left;
+				    width: 50%;
+				    text-overflow: ellipsis;
+				    white-space: nowrap;
+				    overflow: hidden;
+				    i{
+				    	background: url(http://cfbassets.b0.upaiyun.com/assets/journals/icon_journal@2x-774d0501e4fb2a0af4ac5945729f11cd.png) no-repeat center;
+					    width: 20px;
+					    height: 24px;
+					    background-position: -192px 0;
+					    display: inline-block;
+					    vertical-align: middle;
+				        transform: scale(0.7);
+				    }
+			    }
+			    .fr{
+			    	float: right;
+				    width: 50%;
+				    text-overflow: ellipsis;
+				    white-space: nowrap;
+				    overflow: hidden;
+				    text-align: right;
+			    }
+	    	}
+    	}
+    	
+    }
+}
+#masonry{
+	ul{
+		float:left;
+		width: 24.57%;
+		li{
+			width: 100%;
+		}
+	}
+}
+#masonry::after{
+	content: '';
+	display: block;
+	clear:both;
+}
 
 footer{
 	height: 240px;

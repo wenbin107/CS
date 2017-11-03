@@ -1,6 +1,7 @@
 require(['jquery'],function($){
-	// alert(1);
+	// alert(1)
 	$(function(){
+		var uls = document.querySelectorAll('.uls');
         $.ajax({
             url: '../json/hot.json',
             type: 'Get',
@@ -14,8 +15,26 @@ require(['jquery'],function($){
                 	for(var k = 0;k<data.items[i].pc.length;k++){
                           if(data.items[i].pc[k].poi_category != "景点"&&data.items[i].pc[k].poi_category != "其它"){
                 		console.log(data.items[i].pc[k].desc);
-                	var box1 = $('<div style="border:1px solid red;width:300px;"  class="box1 left"><img style="width:300px;height:400px;"  src="'+data.items[i].pc[k].poi_category+'"><p>'+data.items[i].pc[k].desc+'</p></div>')
-                     $('#bigBox').append(box1[k]);
+                    var li = document.createElement('li');
+                	li.innerHTML = '<a class="yinxiang" href="/notes/DdoTNzXrT4-5MLasaVXOkg" title="" target="_blanket"><div class="img-cnt"><img src="'+data.items[i].pc[k].poi_category+'"><p class="photo-num">5P</p></div><div class="txt-cnt">'+'<p class="txt">'+data.items[i].pc[k].desc+'</p></div><div class="note-bottom"><span class="fl"><i class="icon-location"></i>野柳地质公园</span><span class="fr">Rach</span></div></a>'
+                   li.children[0].children[0].children[0].onload = function(){
+						//判断ul高度,用来存放ul高度
+							var ulHeightArr = [];
+							for(var j = 0; j < uls.length; j++){
+								ulHeightArr.push(uls[j].offsetHeight);
+							}
+							var minHeight = ulHeightArr[0];
+							var minIndex = 0;
+							for(var k = 0; k < ulHeightArr.length;k++){
+								if(minHeight > ulHeightArr[k]){
+									minHeight = ulHeightArr[k];
+									minIndex = k;
+								}
+							}
+							uls[minIndex].appendChild(this.parentNode.parentNode.parentNode);
+
+						}
+
                 	}
                 	
                 	}
@@ -142,7 +161,12 @@ $('#btn div').hover(function() {
       $('#hot').scrollLeft(index*1180);
   
 });
-
+   $('#xc').click(function(){
+    location.href = 'http://chufaba.me/journals/';
+   });
+    $('#qc').click(function(){
+    location.href = 'http://chufaba.me/themes/';
+   })
 $('#hot ul li').hover(function(){
 	$(this).children("#black").show()
 	clearInterval(luntimer);

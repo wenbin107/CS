@@ -61,9 +61,9 @@
                </li>
                <li>灵感
                 <div>
-                   <i>行程</i>
+                   <i id="xc">行程</i>
                    </br>
-                   <i>去处</i>
+                   <i id="qc">去处</i>
                </div>
                </li>
            </ul>
@@ -79,14 +79,14 @@
             <img src="http://cfbassets.b0.upaiyun.com/assets/v2/custom-image1-31182b78bab8fc879e4f115cb2555100.png" alt="">
             <p>由行程规划师为你提供1对1定制服务</p>
             <p>包含行程定制、全程预定、电子路书、旅行管家行中支持等服务</p>
-            <button>帮我定制</button>
+            <button><a style="height: 100%;width: 100%;color: #fff;" href="help.html">帮我定制</a></button>
         </div>
         <div class="box">
             <img src="http://cfbassets.b0.upaiyun.com/assets/v2/custom-image2-404bdc688c67366b44ff3c0cc3fd14a4.png
 " alt="">
             <p>使用旅行计划APP在手机上自助完成行程规划和预定</p>
             <p>同时提供攻略、导航等行中实用功能</p>
-            <button>自助定制</button>
+            <button><a style="height: 100%;width: 100%;color: #fff;" href="help1.html">自助定制</a></button>
         </div>
     </div>
     <p style="text-align: center;font-size:40px;margin:40px 0;">热门目的地定制</p>
@@ -244,12 +244,21 @@
             </div>
         </div>
     </div>
-    <div>
-        <p style="text-align: center;font-size: 35px;margin:20px 0;">印象</p>
-        <div class="clearfix" id="bigBox" style="width: 80%;border:1px solid red; margin:0 auto;">
-           
-        </div>
+   <div class="impression" >
+    <p class="impress">印象</p>
+    <div id="masonry" class="Pinterest container-fluid" >
+  
+      <ul class="uls">
+        <!--     <a class="yinxiang" href="/notes/DdoTNzXrT4-5MLasaVXOkg" title="" target="_blanket"><div class="img-cnt"><img src="//img.chufaba.me/pc_217281_15070172781785_1200_1600.jpg" alt=""><p class="photo-num">5P</p></div><div class="txt-cnt"><p class="txt">被风化的石头千奇百样，旁边临海。只是风很大，沙土很多。</p></div><div class="note-bottom"><span class="fl"><i class="icon-location"></i>野柳地质公园</span><span class="fr">Rach</span></div></a> -->
+      </ul>
+      <ul class="uls"></ul>
+      <ul class="uls"></ul>
+      <ul class="uls"></ul>
+
     </div>
+   
+  </div>
+
     <footer>
         
     </footer>
@@ -274,5 +283,22 @@
     }
 
     </script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.11.2/jquery.js"></script>
+  <script src="http://jq22.qiniudn.com/masonry-docs.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+        var $container = $('.Pinterest container-fluid');
+        $container.imagesLoaded(function() {
+            $container.masonry({
+                    itemSelector: '.yinxiang',
+                    gutter: 20,
+                    isAnimated: true,
+                });
+         });
+    });
+    // 这里我们首先定位想使用瀑布流的大容器是什么，这里就是带有 #masonry ID 的 <div> 标签，在 var $container = $('#masonry'); 这行代码中定义。然后我们还要说明瀑布流里的每个内容块容器上共同的类是什么，这里就是带有 .box 类的 <div> 标签，在itemSelector : '.box', 这行代码中定义。
+    
+    // gutter: 20, 这行代码定义了内容块之间的距离是 20 像素，isAnimated: true, 这行代码可以打开动画选项，也就是当改变窗口宽度的时候，每行显示的内容块的数量会有变化，这个变化会使用一种动画效果。
+  </script>
 </body>
 </html>

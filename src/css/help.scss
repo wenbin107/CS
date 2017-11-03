@@ -45,6 +45,7 @@ li{
 			    	text-decoration:none;
 			    }
 			    .subitem{
+			    	display: none;
 				    position: absolute;
 				    // display: none;
 				    width: 120px;
@@ -299,6 +300,7 @@ li{
     	}
     }
 }
+
 .content6{
     width: 100%;
     text-align: center;
